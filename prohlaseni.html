@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRES ČESKO - Technologie, odpovědnost, příležitost</title>
+    <style>
+        /* Nastavení barev podle loga */
+        :root {
+            --primary-blue: #003399; 
+            --light-blue: #0088cc;
+            --primary-red: #cc0000;
+            --bg-light: #f4f7f6;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-light); 
+            color: #333; 
+            line-height: 1.6; 
+        }
+        
+        /* Hlavička a navigace */
+        header { 
+            background: white; 
+            padding: 15px 50px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+        
+        .logo img { height: 60px; }
+        
+        nav a { 
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: var(--primary-blue); 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            transition: color 0.3s; 
+        }
+        
+        nav a:hover { color: var(--primary-red); }
+        
+        /* Hlavní Hero sekce */
+        .hero { 
+            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue)); 
+            color: white; 
+            padding: 120px 20px; 
+            text-align: center; 
+        }
+        
+        .hero h1 { font-size: 3.5em; margin-bottom: 10px; letter-spacing: 2px; }
+        .hero p.slogan { font-size: 1.5em; font-style: italic; margin-bottom: 30px; color: #e6f2ff; }
+        .hero p.vision { max-width: 800px; margin: 0 auto; font-size: 1.2em; }
+        
+        /* Obecný kontejner */
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        
+        .section-title { 
+            text-align: center; 
+            color: var(--primary-blue); 
+            font-size: 2.5em; 
+            margin-bottom: 40px; 
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-red);
+            margin: 10px auto 0;
+        }
+
+        /* O nás sekce */
+        .about-box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            font-size: 1.1em;
+            border-left: 6px solid var(--primary-red);
+        }
+
+        /* Grid pro program */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+        
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            transition: transform 0.3s; 
+            border-top: 5px solid var(--primary-blue); 
+        }
+        
+        .card:hover { 
+            transform: translateY(-5px); 
+            border-top-color: var(--primary-red); 
+        }
+        
+        .card h3 { color: var(--primary-blue); font-size: 1.5em; margin-bottom: 15px; }
+        .icon { font-size: 2.5em; margin-bottom: 15px; display: block; }
+        
+        /* Styl politiky */
+        .style-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .style-item {
+            background: var(--primary-blue);
+            color: white;
+            padding: 30px;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0 5px 15px rgba(0,51,153,0.3);
+        }
+
+        /* Patička */
+        footer { 
+            background: #1a1a1a; 
+            color: white; 
+            text-align: center; 
+            padding: 30px; 
+            margin-top: 50px; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="PROGRES ČESKO Logo">
+        </div>
+        <nav>
+            <a href="#domu">Domů</a>
+            <a href="#o-nas">O nás</a>
+            <a href="#program">Program</a>
+            <a href="#styl">Náš styl</a>
+        </nav>
+    </header>
+
+    <section id="domu" class="hero">
+        <h1>PROGRES ČESKO</h1>
+        <p class="slogan">Technologie, odpovědnost, příležitost</p>
+        <p class="vision">
+            Česká republika se nachází v době, kdy se svět kolem nás mění rychleji než kdykoliv předtím.  
+            Naším cílem je vybudovat stát, který nebude pro své občany přítěží, ale partnerem.  
+            Chceme Česko, které přestane být „montovnou Evropy“ a stane se jejím technologickým a mozkovým centrem. 
+        </p>
+    </section>
+
+    <section id="o-nas" class="container">
+        <h2 class="section-title">Kdo jsme</h2>
+        <div class="about-box">
+            <p><strong>Progres znamená technologický vývoj, modernizaci a pohyb dopředu.</strong></p>
+            <br>
+            <p>Strana PROGRES ČESKO vznikla s přesvědčením, že na tyto výzvy nesmíme reagovat strachem nebo uzavřením se do minulosti, ale odvahou a inovacemi. </p>
+            <p>Jsme moderní středopravicová síla. Věříme v zemi, kde moderní technologie usnadňují každodenní život, kde vzdělání dává mladým lidem skutečná křídla a kde je svoboda jednotlivce pevně spojena s jeho odpovědností vůči společnosti i planetě. </p>
+        </div>
+    </section>
+
+    <section id="program" class="container">
+        <h2 class="section-title">Naše programové priority</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <span class="icon">🎓</span>
+                <h3>Školství a Vzdělávání</h3>
+                <p>Klíčem k úspěchu je modernizace školství , důstojné platy učitelů  a reformace osnov. Podporujeme také programy jako je Erasmus+ a vznik sítě mezi školních aktivit. </p>
+            </div>
+
+            <div class="card">
+                <span class="icon">🌍</span>
+                <h3>Zahraničí a Obrana</h3>
+                <p>Základem naší bezpečnosti je pevné a aktivní ukotvení v demokratických strukturách EU a NATO.  </p>
+                <p>Investujeme do modernizace bez dluhů  a budování globálního kreditu. </p>
+            </div>
+
+            <div class="card">
+                <span class="icon">⚙️</span>
+                <h3>Průmysl a Ekonomika</h3>
+                <p>Zaměříme se na modernizaci a inovace  a masivní zavádění technologií Průmyslu 4.0.  Budeme podporovat domácí výrobce  a dbát na zodpovědné hospodaření státu. </p>
+            </div>
+
+            <div class="card">
+                <span class="icon">🏥</span>
+                <h3>Moderní zdravotnictví</h3>
+                <p>Digitalizace a efektivní péče zachraňuje životy.  Zajistíme investice do nejmodernější techniky  a podporu nové generace zdravotníků. </p>
+            </div>
+
+            <div class="card">
+                <span class="icon">🌱</span>
+                <h3>Zemědělství</h3>
+                <p>Prosazujeme ochranu půdy před drancováním  a šetrnou péči o českou krajinu.  Chceme zemědělství s minimem chemie a podporu lokálních producentů. </p>
+            </div>
+
+            <div class="card">
+                <span class="icon">🚆</span>
+                <h3>Chytrá doprava</h3>
+                <p>Naší prioritou je dálniční síť  a stavba vysokorychlostních železnic.  Zavádíme technologie místo kolon, jako je například jednotná aplikace pro všechny druhy dopravy. </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="styl" class="container">
+        <h2 class="section-title">Náš styl politiky</h2>
+        <div class="style-grid">
+            <div class="style-item">
+                <h3>Odbornost</h3>
+                <p>Rozhodování založené<br>na datech a faktech.</p>
+            </div>
+            <div class="style-item">
+                <h3>Slušnost</h3>
+                <p>Otevřená a slušná<br>politická kultura.</p>
+            </div>
+            <div class="style-item">
+                <h3>Vize</h3>
+                <p>Dlouhodobé myšlení místo<br>krátkodobých slibů.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PROGRES ČESKO. Vytvořeno jako studentský projekt pro 1. ročník SŠ.</p>
+    </footer>
+
+</body>
+</html>
